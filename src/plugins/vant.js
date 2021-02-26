@@ -1,4 +1,38 @@
-import { ActionBar, ActionBarIcon, ActionBarButton, Divider, Popup, Overlay, Loading, Dialog, ContactCard, Form, AddressEdit, AddressList, Field, CellGroup, Cell, SwipeCell, Icon, Stepper, Card, Checkbox, CheckboxGroup, Button, Swipe, SwipeItem, PullRefresh, List, Tab, Tabs, SubmitBar, Toast, Skeleton } from 'vant'
+import { 
+  ActionBar, 
+  ActionBarIcon, 
+  ActionBarButton, 
+  Divider, 
+  Popup, 
+  Overlay, 
+  Loading, 
+  Dialog, 
+  ContactCard, 
+  Form, 
+  AddressEdit, 
+  AddressList, 
+  Field, 
+  CellGroup, 
+  Cell, 
+  SwipeCell, 
+  Icon, 
+  Stepper, 
+  Card, 
+  Checkbox, 
+  CheckboxGroup, 
+  Button, 
+  Swipe, 
+  SwipeItem, 
+  PullRefresh, 
+  List, 
+  Tab, 
+  Tabs, 
+  SubmitBar, 
+  Toast, 
+  Skeleton,
+  Lazyload,
+  Image
+} from 'vant'
 
 function plugins(app){
   app.use(ActionBarButton)
@@ -32,6 +66,8 @@ function plugins(app){
   .use(Checkbox)
   .use(CheckboxGroup)
   .use(Skeleton)
+  .use(Lazyload)
+  .use(Image)
 }
 
 export default plugins

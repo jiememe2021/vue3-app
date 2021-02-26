@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view class="router-view" v-slot="{ Component }">
+    <router-view
+      v-slot="{ Component }"
+      class="router-view"
+    >
       <transition :name="transitionName">
         <component :is="Component" />
       </transition>
@@ -40,6 +43,7 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
+  background: #f5f3f3;
 }
 #app {
   height: 100%;
