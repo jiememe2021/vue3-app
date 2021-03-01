@@ -45,11 +45,34 @@
   </header>
 </template>
 <script>
+import { onMounted, onUnmounted, ref } from 'vue'
 export default {
   name: 'Header',
+  props:{
+    scrollTop:{
+      type: String,
+      default: ''
+    }
+  },
+  setup(props){
+    let headerScroll = ref(false)
+    onMounted(()=>{
+      if(props.scrollTop){
+        window.addEventListener('scroll', ()=>{
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          headerScroll.value = scrollTop > props.scrollTop
+        })
+      }
+    })
+    onUnmounted(()=>{
+      window.addEventListener('scroll', ()=>{})
+    })
+    return {
+      headerScroll
+    }
+  },
   data(){
     return {
-      headerScroll: false
     }
   },
   computed:{
@@ -92,6 +115,9 @@ export default {
   .van-icon{
     vertical-align: text-bottom;
     margin-left: 10px;
+  }
+  &.active{
+    background: #1baeae;
   }
 }
 </style>
