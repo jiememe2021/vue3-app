@@ -15,6 +15,14 @@ const router = createRouter({
         index: 1
       }
     },
+    {
+      path: '/data-sharing',
+      name: 'dataSharing',
+      component: () => import(/* webpackChunkName: "home" */ '@/views/data-sharing-demo/index.vue'),
+      meta: {
+        index: 1
+      }
+    },
   ]
 })
 
