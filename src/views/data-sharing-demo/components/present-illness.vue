@@ -12,7 +12,6 @@
 import {emrData} from '../data/'
 export default {
   name: 'PresetIllness',
-  // 如果
   // data(){
   //   return {
   //     emrData
@@ -22,12 +21,6 @@ export default {
     return {
       emrData
     }
-  },
-  mounted(){
-    setTimeout(()=>{
-      console.log('emrData', emrData)
-      console.log('this.emrData', this.emrData)
-    }, 3000)
   }
 }
 </script>

@@ -23,6 +23,14 @@ const router = createRouter({
         index: 1
       }
     },
+    {
+      path: '/chat',
+      name: 'chat',
+      component: () => import(/* webpackChunkName: "home" */ '@/views/chat/index.vue'),
+      meta: {
+        index: 1
+      }
+    }
   ]
 })
 

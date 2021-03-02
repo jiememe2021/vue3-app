@@ -12,7 +12,8 @@
     "core-js": "^3.6.5",
     "vant": "^3.0.6",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.4"
+    "vue-router": "^4.0.4",
+    "vue-touch": "^2.0.0-beta.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
