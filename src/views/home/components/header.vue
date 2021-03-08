@@ -79,6 +79,8 @@ export default {
     isLogin(){
       return ''
     }
+  },
+  methods:{
   }
 }
 </script>

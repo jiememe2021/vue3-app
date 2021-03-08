@@ -30,6 +30,14 @@ const router = createRouter({
       meta: {
         index: 1
       }
+    },
+    {
+      path: '/detail',
+      name: 'homeDetail',
+      component: () => import(/* webpackChunkName: "home" */ '@/views/home/detail.vue'),
+      meta: {
+        index: 2
+      }
     }
   ]
 })

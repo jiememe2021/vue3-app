@@ -10,6 +10,7 @@
           v-for="(item) in leftList"
           :key="item.goodsId"
           :card-config="item"
+          @click="goUrl"
         />
       </div>
       <div class="flex-box__item right">
@@ -50,6 +51,11 @@ export default {
     }
   },
   async mounted(){
+  },
+  methods:{
+    goUrl(){
+      this.$router.push('detail')
+    }
   }
 }
 </script>

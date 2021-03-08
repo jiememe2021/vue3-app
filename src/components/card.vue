@@ -1,5 +1,8 @@
 <template>
-  <div class="vd-card">
+  <div
+    class="vd-card"
+    @click="$emit('click')"
+  >
     <van-image 
       width="100%"
       :src="goodsCoverImg"
@@ -29,6 +32,7 @@ export default {
       }
     }
   },
+  emits: ['click'],
   data(){
     console.log(this.cardConfig)
     return {
