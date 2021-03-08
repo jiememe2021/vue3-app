@@ -1,5 +1,7 @@
 <template>
-  <div class="vd-home">
+  <div
+    class="vd-home"
+  >
     <vd-header scroll-top="185" />
     <swiper
       :list="swiperList"

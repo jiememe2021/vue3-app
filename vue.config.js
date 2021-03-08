@@ -1,7 +1,11 @@
 // vue.config.js
+const { name } = require('./package.json')
+
 module.exports = {
+  publicPath: '/subapp/vue3-app',
   devServer: {
     host: '0.0.0.0',
+    port: '7778',
     open: true,
     hot: true,
     disableHostCheck: true,
@@ -11,6 +15,9 @@ module.exports = {
         ws: false,
         target: 'http://localhost:3000/'
       }
+    },
+    headers: {
+      'Access-Control-Allow-Origin': '*'
     }
   },
   css: {
@@ -29,4 +36,12 @@ module.exports = {
       },
     },
   },
+  configureWebpack: {
+    output: {
+      // 把子应用打包成 umd 库格式
+      library: `${name}-[name]`,
+      libraryTarget: 'umd',
+      jsonpFunction: `webpackJsonp_${name}`
+    }
+  }
 };

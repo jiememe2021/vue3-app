@@ -1,16 +1,10 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '@/views/home.vue'
 
-const router = createRouter({
-  history: createWebHashHistory(), // hash模式：createWebHashHistory，history模式：createWebHistory
-  routes: [
+const routes =  [
+    // 子应用入口组件需要同步加载，不能异步加载
     {
       path: '/',
-      redirect: '/home'
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: () => import(/* webpackChunkName: "home" */ '@/views/home.vue'),
+      component: Home,
       meta: {
         index: 1
       }
@@ -39,7 +33,6 @@ const router = createRouter({
         index: 2
       }
     }
-  ]
-})
+]
 
-export default router
+export default routes
